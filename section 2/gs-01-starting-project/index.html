@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A First App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <label for="goal">Goal</label>
+        <input type="text" id="goal" v-model="enterdValues"/> <!--هاي اول دايركتيف بتمرق علي بتنفهم من الفيو فايل بس ومعناها انه يوخذ الداتا اللي بهاذ الانبوت-->
+        <button v-on:click="addGoal">Add Goal</button> <!--هاي اول دايركتيف بتمرق علي بتنفهم من الفيو فايل بس ومعناها انه عند الكليك ناديلي هالميثود اللي بالجافاسكربت فايل-->
+      </div>
+      <ul id="goals">
+        <li v-for="goal in goals">{{ goal }}</li> <!--هاي بس خاصه بالفيو وهي فور لوب بتلبو على الأرراي اللي سويتها بالسكربت فايل اللي بنبوش فيها داتا وبتجيب الداتا وبتحطها هون-->
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!--هاي سي دي ان الفيو اللي بدي استخمها(اسهل طريقه هاي وابسطها)-->
+    <script src="app.js"></script>
+  </body>
+</html>
